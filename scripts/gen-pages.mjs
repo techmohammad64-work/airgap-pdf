@@ -7,7 +7,7 @@ import { fileURLToPath } from 'node:url'
 const root = join(dirname(fileURLToPath(import.meta.url)), '..')
 const cfg = JSON.parse(readFileSync(join(root, 'site/tools.json'), 'utf8'))
 const BASE = normBase(process.env.BASE_PATH || '/')
-const SITE_URL = (process.env.SITE_URL || 'https://habitsforgoodinfo-debug.github.io').replace(/\/$/, '')
+const SITE_URL = (process.env.SITE_URL || 'https://techmohammad64-work.github.io').replace(/\/$/, '')
 
 function normBase(b) {
   if (!b.startsWith('/')) b = '/' + b

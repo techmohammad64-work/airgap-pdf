@@ -3,7 +3,7 @@
     "name": "AirgapPDF",
     "tagline": "PDF tools that never touch the internet.",
     "description": "Free PDF tools that run entirely in your browser. Merge, split, sign, edit and redact PDFs without uploading them anywhere. Works offline.",
-    "repo": "https://github.com/habitsforgoodinfo-debug/airgap-pdf"
+    "repo": "https://github.com/techmohammad64-work/airgap-pdf"
   },
   "groups": [
     { "id": "pages", "label": "Organize pages" },
