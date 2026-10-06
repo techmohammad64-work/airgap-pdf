@@ -1,0 +1,295 @@
+{
+  "site": {
+    "name": "AirgapPDF",
+    "tagline": "PDF tools that never touch the internet.",
+    "description": "Free PDF tools that run entirely in your browser. Merge, split, sign, edit and redact PDFs without uploading them anywhere. Works offline.",
+    "repo": "https://github.com/habitsforgoodinfo-debug/airgap-pdf"
+  },
+  "groups": [
+    { "id": "pages", "label": "Organize pages" },
+    { "id": "edit", "label": "Edit and sign" }
+  ],
+  "pages": [
+    {
+      "slug": "merge-pdf",
+      "tool": "merge",
+      "group": "pages",
+      "icon": "merge",
+      "name": "Merge PDF",
+      "short": "Combine several PDFs into one file, in any order.",
+      "title": "Merge PDF Files Offline - No Upload | AirgapPDF",
+      "h1": "Merge PDF files without uploading them",
+      "description": "Combine multiple PDF files into one, right in your browser. Your files never leave your device and the tool works offline.",
+      "steps": [
+        "Add two or more PDF files.",
+        "Drag files or individual pages into the order you want.",
+        "Press Merge and save the combined PDF."
+      ],
+      "faq": [
+        ["Are my files uploaded to a server?", "No. AirgapPDF merges files with code running in your browser. You can disconnect from the internet before adding files and it still works."],
+        ["Is there a limit on the number of files?", "No fixed limit. Very large files are limited only by your device's memory."]
+      ]
+    },
+    {
+      "slug": "split-pdf",
+      "tool": "split",
+      "group": "pages",
+      "icon": "split",
+      "name": "Split PDF",
+      "short": "Split a PDF by page ranges or into equal parts.",
+      "title": "Split PDF Offline - Extract Page Ranges Privately | AirgapPDF",
+      "h1": "Split a PDF without uploading it",
+      "description": "Split a PDF into separate files by page ranges or every N pages. Processing happens on your device, never on a server.",
+      "steps": [
+        "Add a PDF file.",
+        "Choose page ranges, a fixed number of pages per file, or pick pages.",
+        "Press Split and save the files (several files come as a ZIP)."
+      ],
+      "faq": [
+        ["How do I write page ranges?", "Use commas and dashes, for example 1-3, 5, 8-10. Each range becomes its own PDF."],
+        ["Does splitting reduce quality?", "No. Pages are copied as-is, nothing is re-compressed."]
+      ]
+    },
+    {
+      "slug": "organize-pdf",
+      "tool": "organize",
+      "group": "pages",
+      "icon": "grid",
+      "name": "Organize pages",
+      "short": "Reorder, rotate, delete, duplicate or insert blank pages.",
+      "title": "Organize PDF Pages Offline - Reorder, Rotate, Delete | AirgapPDF",
+      "h1": "Organize PDF pages privately",
+      "description": "Reorder, rotate, delete, duplicate and insert blank pages in a PDF. Everything runs locally in your browser.",
+      "steps": [
+        "Add a PDF file.",
+        "Drag pages to reorder them, and use each page's buttons to rotate, duplicate or delete.",
+        "Press Save to download the reorganized PDF."
+      ],
+      "faq": [
+        ["Can I undo a change?", "Yes, use Undo or press Ctrl+Z. Your original file is never modified."]
+      ]
+    },
+    {
+      "slug": "rotate-pdf",
+      "tool": "organize",
+      "mode": "rotate",
+      "group": "pages",
+      "icon": "rotate",
+      "name": "Rotate PDF",
+      "short": "Rotate some or all pages and save.",
+      "title": "Rotate PDF Pages Offline - No Upload | AirgapPDF",
+      "h1": "Rotate PDF pages without uploading",
+      "description": "Rotate individual pages or the whole PDF by 90 or 180 degrees. Runs in your browser, works offline.",
+      "steps": [
+        "Add a PDF file.",
+        "Rotate single pages, or use Rotate all.",
+        "Press Save to download the rotated PDF."
+      ],
+      "faq": [
+        ["Is the rotation permanent?", "Yes, the saved PDF opens rotated in every viewer."]
+      ]
+    },
+    {
+      "slug": "delete-pdf-pages",
+      "tool": "organize",
+      "mode": "delete",
+      "group": "pages",
+      "icon": "trash",
+      "name": "Delete pages",
+      "short": "Remove unwanted pages from a PDF.",
+      "title": "Delete Pages from PDF Offline - No Upload | AirgapPDF",
+      "h1": "Delete pages from a PDF privately",
+      "description": "Remove pages from a PDF directly in your browser. Your document stays on your device.",
+      "steps": [
+        "Add a PDF file.",
+        "Click the pages you want to remove.",
+        "Press Save to download the PDF without them."
+      ],
+      "faq": [
+        ["Is the deleted content really gone?", "Yes. Removed pages are not copied into the new file."]
+      ]
+    },
+    {
+      "slug": "extract-pdf-pages",
+      "tool": "organize",
+      "mode": "extract",
+      "group": "pages",
+      "icon": "extract",
+      "name": "Extract pages",
+      "short": "Pick pages and save them as a new PDF.",
+      "title": "Extract Pages from PDF Offline - No Upload | AirgapPDF",
+      "h1": "Extract pages from a PDF privately",
+      "description": "Select pages from a PDF and save them as a new document, all in your browser.",
+      "steps": [
+        "Add a PDF file.",
+        "Click the pages you want to keep.",
+        "Press Extract to download a PDF with only those pages."
+      ],
+      "faq": [
+        ["Is my original changed?", "No. Extraction creates a new file and leaves the original untouched."]
+      ]
+    },
+    {
+      "slug": "images-to-pdf",
+      "tool": "images-to-pdf",
+      "group": "pages",
+      "icon": "image",
+      "name": "Images to PDF",
+      "short": "Turn JPG, PNG or WebP images into a PDF.",
+      "title": "JPG and PNG to PDF Offline - No Upload | AirgapPDF",
+      "h1": "Convert images to PDF without uploading",
+      "description": "Convert JPG, PNG and WebP images into a single PDF with your choice of page size and margins. Runs locally.",
+      "steps": [
+        "Add one or more images.",
+        "Drag to reorder and choose page size, orientation and margins.",
+        "Press Create PDF and save it."
+      ],
+      "faq": [
+        ["Are images compressed?", "JPG and PNG images are embedded as-is. WebP and other formats are converted to PNG first."]
+      ]
+    },
+    {
+      "slug": "pdf-to-images",
+      "tool": "pdf-to-images",
+      "group": "pages",
+      "icon": "photo",
+      "name": "PDF to images",
+      "short": "Save PDF pages as PNG or JPG images.",
+      "title": "PDF to JPG or PNG Offline - No Upload | AirgapPDF",
+      "h1": "Convert PDF pages to images privately",
+      "description": "Export PDF pages as PNG or JPG images at the resolution you choose. Rendering happens on your device.",
+      "steps": [
+        "Add a PDF file.",
+        "Choose the format, resolution and pages.",
+        "Press Convert and save the images (several images come as a ZIP)."
+      ],
+      "faq": [
+        ["Which resolution should I pick?", "150 DPI is good for screens, 300 DPI for printing."]
+      ]
+    },
+    {
+      "slug": "sign-pdf",
+      "tool": "sign",
+      "group": "edit",
+      "icon": "sign",
+      "name": "Sign PDF",
+      "short": "Draw, type or upload a signature and place it.",
+      "title": "Sign PDF Offline - Private E-Signature, No Upload | AirgapPDF",
+      "h1": "Sign a PDF without uploading it",
+      "description": "Draw, type or upload your signature and place it on any page. Your document and signature never leave your device.",
+      "steps": [
+        "Add a PDF file.",
+        "Create your signature by drawing, typing or uploading an image.",
+        "Place and resize it on the page, then save the signed PDF."
+      ],
+      "faq": [
+        ["Is my signature stored?", "Only if you tick Remember on this device, and then only in this browser. It is never sent anywhere."],
+        ["Is this a legally binding signature?", "It adds a visual signature, which is accepted for many everyday documents. It is not a certificate-based digital signature."]
+      ]
+    },
+    {
+      "slug": "add-text-to-pdf",
+      "tool": "add-text",
+      "group": "edit",
+      "icon": "text",
+      "name": "Add text",
+      "short": "Type on a PDF, add checkmarks, dates or white-out.",
+      "title": "Add Text to PDF Offline - Free PDF Editor, No Upload | AirgapPDF",
+      "h1": "Add text to a PDF privately",
+      "description": "Type anywhere on a PDF, add checkmarks and dates, or white out content. Editing happens entirely in your browser.",
+      "steps": [
+        "Add a PDF file.",
+        "Pick Text, Checkmark, Date or White-out and click on the page.",
+        "Adjust, then save the edited PDF."
+      ],
+      "faq": [
+        ["Does white-out remove the text underneath?", "No, it covers it visually. To remove content for real, use the Redact tool."]
+      ]
+    },
+    {
+      "slug": "watermark-pdf",
+      "tool": "watermark",
+      "group": "edit",
+      "icon": "drop",
+      "name": "Watermark",
+      "short": "Stamp text or an image across pages.",
+      "title": "Watermark PDF Offline - No Upload | AirgapPDF",
+      "h1": "Add a watermark to a PDF privately",
+      "description": "Add a text or image watermark with custom opacity, angle and position. Runs on your device.",
+      "steps": [
+        "Add a PDF file.",
+        "Type the watermark text or choose an image, then adjust the style.",
+        "Press Apply and save the watermarked PDF."
+      ],
+      "faq": [
+        ["Can I watermark only some pages?", "Yes, enter a page range such as 1-3, 7."]
+      ]
+    },
+    {
+      "slug": "add-page-numbers-to-pdf",
+      "tool": "page-numbers",
+      "group": "edit",
+      "icon": "hash",
+      "name": "Page numbers",
+      "short": "Number pages with your choice of style and position.",
+      "title": "Add Page Numbers to PDF Offline - No Upload | AirgapPDF",
+      "h1": "Add page numbers to a PDF privately",
+      "description": "Number the pages of a PDF with your chosen position, format and starting number. Processing stays on your device.",
+      "steps": [
+        "Add a PDF file.",
+        "Choose position, format and starting number.",
+        "Press Apply and save the numbered PDF."
+      ],
+      "faq": [
+        ["Can I skip the cover page?", "Yes. Set the page range to start from page 2 and choose the starting number you want."]
+      ]
+    },
+    {
+      "slug": "fill-pdf-form",
+      "tool": "fill-form",
+      "group": "edit",
+      "icon": "form",
+      "name": "Fill forms",
+      "short": "Fill in PDF form fields and optionally lock them.",
+      "title": "Fill PDF Forms Offline - No Upload | AirgapPDF",
+      "h1": "Fill in PDF forms privately",
+      "description": "Fill text fields, checkboxes and dropdowns in PDF forms, then save or flatten. Your answers never leave your device.",
+      "steps": [
+        "Add a PDF form.",
+        "Fill in the fields shown in the side panel.",
+        "Save, optionally flattening so the answers can no longer be edited."
+      ],
+      "faq": [
+        ["My PDF shows no fields. Why?", "The form may be a scanned image or use the XFA format. Use Add text to type on it instead."]
+      ]
+    },
+    {
+      "slug": "redact-pdf",
+      "tool": "redact",
+      "group": "edit",
+      "icon": "redact",
+      "name": "Redact",
+      "short": "Permanently black out sensitive content.",
+      "title": "Redact PDF Offline - True Redaction, No Upload | AirgapPDF",
+      "h1": "Redact a PDF permanently, without uploading it",
+      "description": "Black out sensitive text and images for real. Redacted pages are flattened so hidden content cannot be copied back out.",
+      "steps": [
+        "Add a PDF file.",
+        "Draw boxes over everything you want to hide.",
+        "Press Redact and save. Redacted pages are flattened to images."
+      ],
+      "faq": [
+        ["Why can't I select text on redacted pages afterwards?", "To guarantee hidden text is gone, redacted pages are converted to images. Pages without redactions keep their selectable text."],
+        ["Is a black box enough?", "Many tools only draw a box over text that can still be copied. AirgapPDF removes the content underneath."]
+      ]
+    }
+  ],
+  "extra": [
+    {
+      "slug": "privacy",
+      "page": "privacy",
+      "title": "How We Prove Your Files Never Leave Your Device | AirgapPDF",
+      "description": "Three ways to verify that AirgapPDF never uploads your files: the airplane-mode test, the network inspector, and the security policy enforced by your browser."
+    }
+  ]
+}
