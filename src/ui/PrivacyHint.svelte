@@ -70,6 +70,13 @@
     flex: none;
     margin-left: auto;
   }
+  @media (min-width: 901px) {
+    .hint {
+      left: 20px;
+      transform: none;
+      width: 380px;
+    }
+  }
   @media (max-width: 900px) {
     .hint {
       bottom: 88px;
