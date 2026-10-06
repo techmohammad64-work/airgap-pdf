@@ -4,6 +4,8 @@ import { PDFDocument, StandardFonts, degrees } from 'pdf-lib'
 import { readFile } from 'node:fs/promises'
 import { deflateSync } from 'node:zlib'
 
+const FONTS = new URL('../../node_modules/pdfjs-dist/standard_fonts/', import.meta.url).pathname
+
 export { expect }
 
 export async function makePdf(n: number, label = 'Page', opts: { rotate?: number; size?: [number, number] } = {}) {
@@ -84,7 +86,7 @@ export async function loadPdf(bytes: Buffer) {
 /** Text per page, extracted with pdf.js in Node. */
 export async function pageTexts(bytes: Buffer | Uint8Array): Promise<string[]> {
   const pdfjs = await import('pdfjs-dist/legacy/build/pdf.mjs')
-  const doc = await pdfjs.getDocument({ data: new Uint8Array(bytes), isEvalSupported: false }).promise
+  const doc = await pdfjs.getDocument({ data: new Uint8Array(bytes), isEvalSupported: false, standardFontDataUrl: FONTS }).promise
   const out: string[] = []
   for (let i = 1; i <= doc.numPages; i++) {
     const tc = await (await doc.getPage(i)).getTextContent()

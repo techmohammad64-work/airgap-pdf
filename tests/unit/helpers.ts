@@ -2,6 +2,8 @@ import { PDFDocument, StandardFonts, degrees } from 'pdf-lib'
 import * as pdfjs from 'pdfjs-dist/legacy/build/pdf.mjs'
 import { deflateSync } from 'node:zlib'
 
+const FONTS = new URL('../../node_modules/pdfjs-dist/standard_fonts/', import.meta.url).pathname
+
 /** Creates a PDF whose pages each contain the text "Page N" (1-based). */
 export async function makePdf(
   n: number,
@@ -49,7 +51,7 @@ export async function makeEncrypted(): Promise<Uint8Array> {
 
 /** Text of each page, extracted with pdf.js. */
 export async function pageTexts(bytes: Uint8Array): Promise<string[]> {
-  const doc = await pdfjs.getDocument({ data: bytes.slice(), useSystemFonts: false, isEvalSupported: false }).promise
+  const doc = await pdfjs.getDocument({ data: bytes.slice(), useSystemFonts: false, isEvalSupported: false, standardFontDataUrl: FONTS }).promise
   const out: string[] = []
   for (let i = 1; i <= doc.numPages; i++) {
     const tc = await (await doc.getPage(i)).getTextContent()
@@ -67,7 +69,7 @@ export async function pageTexts(bytes: Uint8Array): Promise<string[]> {
 
 /** Text items with their positions in visual (viewport) coordinates, top-left origin. */
 export async function textPositions(bytes: Uint8Array, pageNo = 1) {
-  const doc = await pdfjs.getDocument({ data: bytes.slice(), isEvalSupported: false }).promise
+  const doc = await pdfjs.getDocument({ data: bytes.slice(), isEvalSupported: false, standardFontDataUrl: FONTS }).promise
   const page = await doc.getPage(pageNo)
   const vp = page.getViewport({ scale: 1 })
   const tc = await page.getTextContent()

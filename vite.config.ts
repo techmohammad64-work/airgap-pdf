@@ -3,9 +3,9 @@ import { svelte } from '@sveltejs/vite-plugin-svelte'
 import { VitePWA } from 'vite-plugin-pwa'
 import { readdirSync, statSync } from 'node:fs'
 import { join, resolve } from 'node:path'
-import { CSP } from './src/lib/csp'
+import { CSP } from './src/lib/csp.ts'
 
-const root = resolve(__dirname, 'pages')
+const root = resolve(import.meta.dirname, 'pages')
 const base = normBase(process.env.BASE_PATH || '/')
 
 function normBase(b: string) {
@@ -35,7 +35,7 @@ function csp(): Plugin {
 export default defineConfig({
   root,
   base,
-  publicDir: resolve(__dirname, 'public'),
+  publicDir: resolve(import.meta.dirname, 'public'),
   plugins: [
     svelte(),
     csp(),
@@ -70,10 +70,10 @@ export default defineConfig({
   ],
   worker: { format: 'es' },
   build: {
-    outDir: resolve(__dirname, 'dist'),
+    outDir: resolve(import.meta.dirname, 'dist'),
     emptyOutDir: true,
     target: 'es2022',
     rollupOptions: { input: htmlEntries(root) },
   },
-  server: { fs: { allow: [__dirname] } },
+  server: { fs: { allow: [import.meta.dirname] } },
 })
