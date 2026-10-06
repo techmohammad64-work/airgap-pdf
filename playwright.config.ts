@@ -1,9 +1,10 @@
 import { defineConfig, devices } from '@playwright/test'
+import { resolve } from 'node:path'
 
 const base = (process.env.BASE_PATH || '/').replace(/\/?$/, '/')
 // E2E_PORT / E2E_DIST let several builds be tested side by side.
 const port = Number(process.env.E2E_PORT || 4173)
-const dist = process.env.E2E_DIST || 'dist'
+const dist = resolve(process.env.E2E_DIST || 'dist')
 
 export default defineConfig({
   testDir: 'tests/e2e',
