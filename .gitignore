@@ -1,6 +1,6 @@
 node_modules/
-dist/
-pages/
+/dist/
+/pages/
 public/pdfjs/
 public/sitemap.xml
 public/robots.txt
