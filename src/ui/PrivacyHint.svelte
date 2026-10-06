@@ -72,9 +72,10 @@
   }
   @media (min-width: 901px) {
     .hint {
-      left: 20px;
+      left: auto;
+      right: 24px;
       transform: none;
-      width: 380px;
+      width: 320px;
     }
   }
   @media (max-width: 900px) {

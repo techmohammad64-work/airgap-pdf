@@ -365,6 +365,11 @@ input[type='color'] {
   font-size: 15px;
 }
 
+.notice > svg {
+  flex: none;
+  margin-top: 2px;
+}
+
 .notice-error {
   background: var(--danger-soft);
   color: var(--danger);

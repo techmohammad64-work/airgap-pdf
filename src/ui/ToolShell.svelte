@@ -85,8 +85,8 @@
         {/if}
         {#if error}<p class="notice notice-error" role="alert"><Icon name="alert" size={18} /> <span>{error}</span></p>{/if}
         <div class="actions">
-          {#if busy}
-            <button class="btn btn-primary btn-lg" disabled><span class="spinner"></span> {busyText}</button>
+          {#if busy || loading}
+            <button class="btn btn-primary btn-lg" disabled><span class="spinner"></span> {busy ? busyText : 'Opening files…'}</button>
           {:else}
             {@render actions()}
           {/if}

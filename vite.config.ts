@@ -59,7 +59,7 @@ export default defineConfig({
       },
       workbox: {
         // Precache everything, so every tool works with no network at all.
-        globPatterns: ['**/*.{html,js,mjs,css,svg,png,ico,webmanifest,json,bcmap,pfb,ttf,otf,wasm,icc,txt,xml}'],
+        globPatterns: ['**/*.{html,js,mjs,css,svg,png,ico,woff,woff2,webmanifest,json,bcmap,pfb,ttf,otf,wasm,icc,txt,xml}'],
         maximumFileSizeToCacheInBytes: 15 * 1024 * 1024,
         navigateFallback: null,
         cleanupOutdatedCaches: true,
